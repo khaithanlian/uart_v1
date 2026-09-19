@@ -3,9 +3,11 @@ idf_component_register(
         "board.c" 
         "uart.c" 
         "main.c"
+        "led.c"
     INCLUDE_DIRS
          "."
     REQUIRES 
         esp_driver_uart 
         esp_driver_i2c
+        esp_driver_gpio
 )

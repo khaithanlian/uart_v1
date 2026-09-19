@@ -48,6 +48,16 @@ void uart_init(void)
     );
 }
 
+int uart_receive_byte(char *data)
+{
+    return uart_read_bytes(
+        BOARD_UART_PORT,
+        data,
+        1,
+        portMAX_DELAY
+    );
+}
+
 void uart_write(const char *data)
 {
     uart_write_bytes(
